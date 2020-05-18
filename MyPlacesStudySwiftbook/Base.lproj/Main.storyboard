@@ -10,18 +10,74 @@
         <scene sceneID="8eU-hx-H15">
             <objects>
                 <tableViewController id="AFN-bJ-fdO" customClass="MainViewController" customModule="MyPlacesStudySwiftbook" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mpp-gv-f3E">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mpp-gv-f3E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Gi5-de-kUP">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Gi5-de-kUP" customClass="CustomTableViewCell" customModule="MyPlacesStudySwiftbook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gi5-de-kUP" id="MD9-eq-Yo9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Jv-YQ-7ea">
+                                            <rect key="frame" x="15" y="10" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="65" id="lgI-bm-YUI"/>
+                                                <constraint firstAttribute="width" constant="65" id="xpO-wz-W8F"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXZ-rK-X9z">
+                                            <rect key="frame" x="95" y="9" width="299" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="q3f-Oe-MWN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C63-eH-viu">
+                                            <rect key="frame" x="95" y="54" width="299" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="ix6-79-nSW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmR-Un-ane">
+                                            <rect key="frame" x="95" y="35" width="319" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="kXR-R1-CeU"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hmR-Un-ane" firstAttribute="leading" secondItem="5Jv-YQ-7ea" secondAttribute="trailing" constant="15" id="1E4-Ed-daJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="C63-eH-viu" secondAttribute="bottom" constant="10" id="2P4-YK-huo"/>
+                                        <constraint firstAttribute="trailing" secondItem="C63-eH-viu" secondAttribute="trailing" constant="20" id="8yb-H7-EqK"/>
+                                        <constraint firstItem="C63-eH-viu" firstAttribute="top" secondItem="hmR-Un-ane" secondAttribute="bottom" constant="1" id="K6T-BN-kvA"/>
+                                        <constraint firstItem="TXZ-rK-X9z" firstAttribute="top" secondItem="MD9-eq-Yo9" secondAttribute="top" constant="9" id="bfq-1F-Gdv"/>
+                                        <constraint firstItem="5Jv-YQ-7ea" firstAttribute="leading" secondItem="MD9-eq-Yo9" secondAttribute="leading" constant="15" id="e7K-rx-htD"/>
+                                        <constraint firstItem="C63-eH-viu" firstAttribute="leading" secondItem="5Jv-YQ-7ea" secondAttribute="trailing" constant="15" id="hEA-yH-OIX"/>
+                                        <constraint firstAttribute="trailing" secondItem="TXZ-rK-X9z" secondAttribute="trailing" constant="20" id="hso-1w-7qd"/>
+                                        <constraint firstItem="TXZ-rK-X9z" firstAttribute="leading" secondItem="5Jv-YQ-7ea" secondAttribute="trailing" constant="15" id="ndQ-9C-Lic"/>
+                                        <constraint firstItem="5Jv-YQ-7ea" firstAttribute="centerY" secondItem="MD9-eq-Yo9" secondAttribute="centerY" id="s8q-89-5sQ"/>
+                                        <constraint firstItem="hmR-Un-ane" firstAttribute="trailing" secondItem="MD9-eq-Yo9" secondAttribute="trailingMargin" constant="20" id="tfD-hm-the"/>
+                                        <constraint firstItem="hmR-Un-ane" firstAttribute="top" secondItem="TXZ-rK-X9z" secondAttribute="bottom" constant="5" id="v7M-H3-ZM0"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfPlace" destination="5Jv-YQ-7ea" id="Tmv-FM-zuu"/>
+                                    <outlet property="locationLabel" destination="hmR-Un-ane" id="7mP-Rt-SuH"/>
+                                    <outlet property="nameLabel" destination="TXZ-rK-X9z" id="9gs-RA-f7j"/>
+                                    <outlet property="typeLabel" destination="C63-eH-viu" id="kKR-83-qKk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,7 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHi-HK-GeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="151"/>
+            <point key="canvasLocation" x="1544.9275362318842" y="150.66964285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="exQ-4v-Ads">
