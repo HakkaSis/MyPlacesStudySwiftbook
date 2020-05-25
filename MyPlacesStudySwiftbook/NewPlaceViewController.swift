@@ -10,7 +10,6 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
     
-    var newPlace: Place?
     var imageIsChahged = false
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -23,9 +22,7 @@ class NewPlaceViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
-        
         saveButton.isEnabled = false
-        
         placeName.addTarget(self, action: #selector(textFieldChange), for: .editingChanged)
     }
 // MARK: - TableView Delegate
@@ -65,6 +62,7 @@ class NewPlaceViewController: UITableViewController {
     }
     
     func saveNewPlace() {
+        
         var image: UIImage?
         
         if imageIsChahged {
@@ -73,7 +71,11 @@ class NewPlaceViewController: UITableViewController {
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
         
-        newPlace = Place(name: placeName.text!, location: placeLocation.text, type: placeType.text, image: image, restorantImage: nil)
+        let imageData = image?.pngData()
+        
+        let newPlace = Place(name: placeName.text!, location: placeLocation.text!, type: placeType.text!, imageData: imageData)
+        
+        StorageManager.saveObject(newPlace)
     }
     
     @IBAction func cancelAction(_ sender: Any) {
