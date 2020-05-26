@@ -15,7 +15,6 @@ class Place: Object {
     @objc dynamic var type: String?
     @objc dynamic var imageData: Data?
     
-    
     convenience init(name: String, location: String?, type: String?, imageData: Data?) {
         self.init()
         
@@ -24,5 +23,4 @@ class Place: Object {
         self.type = type
         self.imageData = imageData
     }
-    
 }

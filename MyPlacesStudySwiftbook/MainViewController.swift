@@ -11,10 +11,7 @@ import RealmSwift
 
 class MainViewController: UITableViewController {
     
- 
- 
     var places: Results<Place>!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +20,6 @@ class MainViewController: UITableViewController {
 
     }
 
-   
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,34 +42,41 @@ class MainViewController: UITableViewController {
         return cell
     }
     
+           // MARK: - Table view delegate
+        override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            
+            let place = places[indexPath.row]
+            let contextItem = UIContextualAction(style: .destructive, title: "Delete") { _,_,_ in
+                StorageManager.deleteObject(place)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            
+            let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
+            
+            return swipeActions
+        }
+        
+        
+     
+    //     MARK: - Navigation
+
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "showDetail" {
+                guard let indexPath = tableView.indexPathForSelectedRow else { return }
+                let place = places[indexPath.row]
+                guard let newPlaceVC = segue.destination as? NewPlaceViewController else { return }
+                newPlaceVC.currentPlace = place
+            }
+        }
+    
     @IBAction func unwingSegue(_ segue: UIStoryboardSegue) {
         guard let newPlaceVC = segue.source as? NewPlaceViewController else { return }
         
-        newPlaceVC.saveNewPlace()
+        newPlaceVC.savePlace()
         tableView.reloadData()
     }
-       // MARK: - Table view delegate
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        let place = places[indexPath.row]
-        let contextItem = UIContextualAction(style: .destructive, title: "Delete") { _,_,_ in
-            StorageManager.deleteObject(place)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
-        let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
-        
-        return swipeActions
-    }
-    
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
 
 }
