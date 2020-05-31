@@ -13,6 +13,7 @@ class NewPlaceViewController: UITableViewController {
    
     var currentPlace: Place?
     var imageIsChahged = false
+//    var newPlace = Place()
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var placeImage: UIImageView!
@@ -22,6 +23,11 @@ class NewPlaceViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        DispatchQueue.main.async {
+//            self.newPlace.savePlaces()
+//        }
+//        
 
         tableView.tableFooterView = UIView()
         saveButton.isEnabled = false

@@ -11,9 +11,11 @@ import RealmSwift
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var places: Results<Place>!
+   
     
     @IBOutlet weak var tableView: UITableView!
+    
+     var places: Results<Place>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
