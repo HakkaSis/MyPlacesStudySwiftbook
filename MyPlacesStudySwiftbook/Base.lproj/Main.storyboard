@@ -301,7 +301,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AdO-Tb-HFl">
                                 <rect key="frame" x="0.0" y="88" width="414" height="39"/>
                                 <segments>
-                                    <segment title="First"/>
+                                    <segment title="Date"/>
                                     <segment title="Name"/>
                                 </segments>
                                 <connections>
@@ -311,10 +311,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qPw-ls-MQn" firstAttribute="top" secondItem="AdO-Tb-HFl" secondAttribute="bottom" constant="1" id="6qr-XY-odm"/>
                             <constraint firstItem="AdO-Tb-HFl" firstAttribute="leading" secondItem="rTL-yR-97D" secondAttribute="leading" id="MDn-Il-WYg"/>
                             <constraint firstItem="rTL-yR-97D" firstAttribute="trailing" secondItem="AdO-Tb-HFl" secondAttribute="trailing" id="RVk-qW-Pcp"/>
                             <constraint firstItem="AdO-Tb-HFl" firstAttribute="top" secondItem="rTL-yR-97D" secondAttribute="top" id="XbZ-Tv-Px5"/>
-                            <constraint firstItem="qPw-ls-MQn" firstAttribute="top" secondItem="AdO-Tb-HFl" secondAttribute="bottom" constant="1" id="zoJ-54-Mx1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rTL-yR-97D"/>
                     </view>
