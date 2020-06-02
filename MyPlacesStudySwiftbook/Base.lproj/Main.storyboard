@@ -302,8 +302,11 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="39"/>
                                 <segments>
                                     <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Name"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="IYc-ad-JCO" eventType="valueChanged" id="nG7-gA-YYE"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -316,7 +319,11 @@
                         <viewLayoutGuide key="safeArea" id="rTL-yR-97D"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="Mbi-YY-rZt">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="cWq-Jk-mzZ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="cWq-Jk-mzZ">
+                            <connections>
+                                <action selector="reverseSorting:" destination="IYc-ad-JCO" id="ahf-vR-1QD"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NPm-yP-fTh">
                             <connections>
                                 <segue destination="S9f-au-BMU" kind="presentation" id="zib-bG-g1j"/>
@@ -324,6 +331,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reversedSortingButton" destination="cWq-Jk-mzZ" id="Lf2-Vq-cFm"/>
+                        <outlet property="segmentedControll" destination="AdO-Tb-HFl" id="WxO-Lv-0EB"/>
                         <outlet property="tableView" destination="qPw-ls-MQn" id="cf4-wr-tq1"/>
                     </connections>
                 </viewController>
