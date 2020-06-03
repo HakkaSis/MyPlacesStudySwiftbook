@@ -35,10 +35,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         places = realm.objects(Place.self)
     // MARK: - setup the search conroller
-
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
+//        searchController.hidesNavigationBarDuringPresentation = false
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }

@@ -163,6 +163,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="xqC-yd-Qqw">
+                                        <rect key="frame" x="0.0" y="503" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xqC-yd-Qqw" id="F2b-uS-5KC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PAt-Fq-djB" customClass="RatingControl" customModule="MyPlacesStudySwiftbook" customModuleProvider="target">
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PAt-Fq-djB" firstAttribute="centerY" secondItem="F2b-uS-5KC" secondAttribute="centerY" id="Gmr-hf-eZo"/>
+                                                <constraint firstItem="PAt-Fq-djB" firstAttribute="centerX" secondItem="F2b-uS-5KC" secondAttribute="centerX" id="aJe-33-GEP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -299,7 +316,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AdO-Tb-HFl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="39"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="32"/>
                                 <segments>
                                     <segment title="Date"/>
                                     <segment title="Name"/>
@@ -314,7 +331,6 @@
                             <constraint firstItem="qPw-ls-MQn" firstAttribute="top" secondItem="AdO-Tb-HFl" secondAttribute="bottom" constant="1" id="6qr-XY-odm"/>
                             <constraint firstItem="AdO-Tb-HFl" firstAttribute="leading" secondItem="rTL-yR-97D" secondAttribute="leading" id="MDn-Il-WYg"/>
                             <constraint firstItem="rTL-yR-97D" firstAttribute="trailing" secondItem="AdO-Tb-HFl" secondAttribute="trailing" id="RVk-qW-Pcp"/>
-                            <constraint firstItem="AdO-Tb-HFl" firstAttribute="top" secondItem="rTL-yR-97D" secondAttribute="top" id="XbZ-Tv-Px5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rTL-yR-97D"/>
                     </view>
