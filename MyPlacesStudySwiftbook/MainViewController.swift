@@ -77,7 +77,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
            // MARK: - Table view delegate
-       func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    
+    }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
             
             let place = places[indexPath.row]
             let contextItem = UIContextualAction(style: .destructive, title: "Delete") { _,_,_ in
@@ -95,7 +100,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     //     MARK: - Navigation
 
 
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "showDetail" {
                 guard let indexPath = tableView.indexPathForSelectedRow else { return }
                 let place: Place

@@ -12,7 +12,11 @@ import UIKit
     
     private var ratingButtons = [UIButton]()
     
-    var rating = 0
+    var rating = 0 {
+        didSet {
+            updateButtonSelectionState()
+        }
+    }
     
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
@@ -38,7 +42,16 @@ import UIKit
 //    MAKR: Button Action
     
     @objc func ratingButtonTapped(button: UIButton) {
-        print("Button pressed 🖖")
+        guard let index = ratingButtons.firstIndex(of: button) else { return }
+        
+//        calculate rating of the selected button
+        let selctedRating = index + 1
+        
+        if selctedRating == rating {
+            rating = 0
+        } else {
+            rating = selctedRating
+        }
     }
     
     
@@ -51,11 +64,22 @@ import UIKit
         }
         
         ratingButtons.removeAll()
+            //        load button image
+        let bundle = Bundle(for: type(of: self))
+        let filledStar = UIImage(named: "filledStar", in: bundle, compatibleWith: self.traitCollection)
+        let emptyStar = UIImage(named: "emptyStar", in: bundle, compatibleWith: self.traitCollection)
+        let highlightedStar = UIImage(named: "highlightedStar", in: bundle, compatibleWith: self.traitCollection)
+        
         
         for _ in 0..<starCount {
-//        create the button
+            //        create the button
         let button = UIButton()
-            button.backgroundColor = .red
+            //        set the button image
+            button.setImage(emptyStar, for: .normal)
+            button.setImage(filledStar, for: .selected)
+            button.setImage(highlightedStar, for: .highlighted)
+            button.setImage(highlightedStar, for: [.highlighted, .selected])
+           
                  
             //        add constraints
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -71,13 +95,13 @@ import UIKit
             addArrangedSubview(button)
             //        add the new button on the rating button array
             ratingButtons.append(button)
-
-
         }
-
-     
-        
-        
+        updateButtonSelectionState()
     }
-
+    
+    private func updateButtonSelectionState() {
+        for (index, button) in ratingButtons.enumerated() {
+            button.isSelected = index < rating
+        }
+    }
 }
