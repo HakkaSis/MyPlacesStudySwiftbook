@@ -212,7 +212,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDC-fI-Gdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="KoE-m3-UDS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2429" y="151"/>
+            <point key="canvasLocation" x="2428.985507246377" y="150.66964285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qzq-22-bDa">
@@ -259,50 +259,65 @@
                                                         <constraint firstAttribute="width" constant="65" id="PnI-wT-8aJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSP-bB-3Ap">
-                                                    <rect key="frame" x="95" y="9" width="299" height="21"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="x97-pD-qqE">
+                                                    <rect key="frame" x="88" y="9.5" width="220" height="66"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSP-bB-3Ap">
+                                                            <rect key="frame" x="0.0" y="0.0" width="220" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="9Wv-zy-FUh"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPc-pq-eFO">
+                                                            <rect key="frame" x="0.0" y="24" width="220" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="wwB-JJ-QX3"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                                            <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68z-Du-JnO">
+                                                            <rect key="frame" x="0.0" y="45" width="220" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="v5S-DK-eq1"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
+                                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="zgQ-XN-8p8" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="316" y="35.5" width="90" height="14"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="9Wv-zy-FUh"/>
+                                                        <constraint firstAttribute="width" constant="90" id="4tA-RO-QfN"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68z-Du-JnO">
-                                                    <rect key="frame" x="95" y="54" width="299" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="v5S-DK-eq1"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
-                                                    <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPc-pq-eFO">
-                                                    <rect key="frame" x="95" y="35" width="319" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="wwB-JJ-QX3"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
-                                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filledStar"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hSP-bB-3Ap" firstAttribute="top" secondItem="Dg1-iV-Jt2" secondAttribute="top" constant="9" id="0eE-0h-waE"/>
-                                                <constraint firstItem="VPc-pq-eFO" firstAttribute="leading" secondItem="XEc-xD-1Lx" secondAttribute="trailing" constant="15" id="4xo-Mr-u77"/>
-                                                <constraint firstItem="hSP-bB-3Ap" firstAttribute="leading" secondItem="XEc-xD-1Lx" secondAttribute="trailing" constant="15" id="A3p-iU-A6G"/>
-                                                <constraint firstItem="VPc-pq-eFO" firstAttribute="trailing" secondItem="Dg1-iV-Jt2" secondAttribute="trailingMargin" constant="20" id="XhV-kn-KHM"/>
+                                                <constraint firstItem="zgQ-XN-8p8" firstAttribute="leading" secondItem="x97-pD-qqE" secondAttribute="trailing" constant="8" id="BYr-nw-q3B"/>
+                                                <constraint firstItem="x97-pD-qqE" firstAttribute="centerY" secondItem="Dg1-iV-Jt2" secondAttribute="centerY" id="ChH-Fi-YrG"/>
+                                                <constraint firstAttribute="trailing" secondItem="zgQ-XN-8p8" secondAttribute="trailing" constant="8" id="SVG-0G-0ft"/>
+                                                <constraint firstItem="x97-pD-qqE" firstAttribute="leading" secondItem="XEc-xD-1Lx" secondAttribute="trailing" constant="8" id="TlP-c8-ARe"/>
                                                 <constraint firstItem="XEc-xD-1Lx" firstAttribute="leading" secondItem="Dg1-iV-Jt2" secondAttribute="leading" constant="15" id="Yhn-0g-Yy5"/>
-                                                <constraint firstAttribute="bottom" secondItem="68z-Du-JnO" secondAttribute="bottom" constant="10" id="aap-vT-3uR"/>
-                                                <constraint firstAttribute="trailing" secondItem="68z-Du-JnO" secondAttribute="trailing" constant="20" id="anb-b6-OS0"/>
-                                                <constraint firstAttribute="trailing" secondItem="hSP-bB-3Ap" secondAttribute="trailing" constant="20" id="j3n-f7-fgo"/>
-                                                <constraint firstItem="VPc-pq-eFO" firstAttribute="top" secondItem="hSP-bB-3Ap" secondAttribute="bottom" constant="5" id="jug-CM-5IA"/>
-                                                <constraint firstItem="68z-Du-JnO" firstAttribute="leading" secondItem="XEc-xD-1Lx" secondAttribute="trailing" constant="15" id="o1g-8z-XZG"/>
+                                                <constraint firstItem="zgQ-XN-8p8" firstAttribute="centerY" secondItem="Dg1-iV-Jt2" secondAttribute="centerY" id="gZJ-f0-owe"/>
                                                 <constraint firstItem="XEc-xD-1Lx" firstAttribute="centerY" secondItem="Dg1-iV-Jt2" secondAttribute="centerY" id="o5b-iF-lvh"/>
-                                                <constraint firstItem="68z-Du-JnO" firstAttribute="top" secondItem="VPc-pq-eFO" secondAttribute="bottom" constant="1" id="zQX-AG-Tk8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="zgQ-XN-8p8" id="Jeg-XN-bjM"/>
                                             <outlet property="imageOfPlace" destination="XEc-xD-1Lx" id="1sL-Wa-gsw"/>
                                             <outlet property="locationLabel" destination="VPc-pq-eFO" id="tem-6G-dzl"/>
                                             <outlet property="nameLabel" destination="hSP-bB-3Ap" id="2Fv-XP-TqI"/>
@@ -364,5 +379,7 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="emptyStar" width="255" height="256"/>
+        <image name="filledStar" width="237.5" height="238"/>
     </resources>
 </document>
