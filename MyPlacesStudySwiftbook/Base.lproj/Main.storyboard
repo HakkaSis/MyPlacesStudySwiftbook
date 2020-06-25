@@ -31,7 +31,7 @@
             <objects>
                 <tableViewController id="lSg-vU-Rtt" customClass="NewPlaceViewController" customModule="MyPlacesStudySwiftbook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7AB-Qb-3ca">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
@@ -225,7 +225,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDC-fI-Gdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="KoE-m3-UDS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2428.985507246377" y="150.66964285714286"/>
+            <point key="canvasLocation" x="2280" y="151"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ebQ-RU-VxA">
@@ -261,10 +261,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NR5-gD-W76"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Y2W-dm-ZeR" id="udb-6Z-UL1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VI-DP-CgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3215.9420289855075" y="157.36607142857142"/>
+            <point key="canvasLocation" x="2991" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qzq-22-bDa">
@@ -282,7 +285,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6b9-9Q-VOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429" y="-531"/>
+            <point key="canvasLocation" x="2280" y="-528"/>
         </scene>
         <!--My Places-->
         <scene sceneID="2wp-sJ-9nf">
@@ -426,7 +429,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CQv-kR-rme"/>
+        <segue reference="qSh-j7-CMb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
