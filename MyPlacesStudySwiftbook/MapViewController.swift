@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class MapViewController: UIViewController {
     
     var place = Place()
     var annotationIdentifier = "annotationIdentifier"
+    let locationManager = CLLocationManager()
     
     
     
@@ -25,6 +27,8 @@ class MapViewController: UIViewController {
         mapView.delegate = self
 
         setupPlacemark()
+        
+        checkLocationServices()
     }
     
 
@@ -61,6 +65,43 @@ class MapViewController: UIViewController {
         }
     }
     
+    private func checkLocationServices() {
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorization()
+        } else {
+            
+        }
+    }
+    
+    private func checkLocationAuthorization() {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            break
+        case .denied:
+            
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            break
+        case .restricted:
+            
+            break
+        case .authorizedAlways:
+            
+            break
+        @unknown default:
+            print("New case is available")
+        }
+    }
+    
+    private func setupLocationManager() {
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
 
 }
 
@@ -88,5 +129,11 @@ extension MapViewController: MKMapViewDelegate {
         
         return annotationView
         
+    }
+}
+
+extension MapViewController:CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationAuthorization()
     }
 }
