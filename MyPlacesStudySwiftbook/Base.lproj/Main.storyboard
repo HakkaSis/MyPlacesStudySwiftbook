@@ -249,15 +249,28 @@
                                     <action selector="closeVC" destination="rq0-6Q-JlZ" eventType="touchUpInside" id="dq3-9k-D4d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdd-sH-g1h">
+                                <rect key="frame" x="324" y="752" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Upm-Xm-sYM"/>
+                                    <constraint firstAttribute="height" constant="50" id="l8Z-2P-2LT"/>
+                                </constraints>
+                                <state key="normal" image="Location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="rq0-6Q-JlZ" eventType="touchUpInside" id="hLn-2G-GAK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Y2W-dm-ZeR" firstAttribute="leading" secondItem="NR5-gD-W76" secondAttribute="leading" id="9FG-ns-dFy"/>
+                            <constraint firstAttribute="bottom" secondItem="Vdd-sH-g1h" secondAttribute="bottom" constant="40" id="H26-xj-iCN"/>
                             <constraint firstItem="Y2W-dm-ZeR" firstAttribute="trailing" secondItem="NR5-gD-W76" secondAttribute="trailing" id="Ioh-hP-GTf"/>
                             <constraint firstAttribute="bottom" secondItem="Y2W-dm-ZeR" secondAttribute="bottom" id="RTO-ua-j7J"/>
                             <constraint firstItem="lKU-Ko-qQR" firstAttribute="top" secondItem="NR5-gD-W76" secondAttribute="top" constant="40" id="UAb-Ca-ulx"/>
                             <constraint firstItem="Y2W-dm-ZeR" firstAttribute="top" secondItem="1Mf-jm-lgz" secondAttribute="top" id="cUf-hX-7T5"/>
                             <constraint firstItem="NR5-gD-W76" firstAttribute="trailing" secondItem="lKU-Ko-qQR" secondAttribute="trailing" constant="40" id="cvS-jM-Hjq"/>
+                            <constraint firstItem="NR5-gD-W76" firstAttribute="trailing" secondItem="Vdd-sH-g1h" secondAttribute="trailing" constant="40" id="kew-53-FaE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NR5-gD-W76"/>
                     </view>
@@ -433,6 +446,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="Location" width="128" height="128"/>
         <image name="Photo" width="195" height="196"/>
         <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
