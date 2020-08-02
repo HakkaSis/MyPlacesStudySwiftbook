@@ -23,8 +23,8 @@ class Place: Object {
 //        "Speak Easy", "Morris Pub", "Вкусные истории",
 //        "Классик", "Love&Life", "Шок", "Бочка"
 //    ]
-    
-    
+//
+//
 //    func savePlaces() {
 //
 //        for place in restaurantNames {
